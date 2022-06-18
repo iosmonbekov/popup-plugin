@@ -1,6 +1,6 @@
 <template>
-  <div class="popup-wrapper">
-    <div class="popup-back"></div>
+  <div class="popup-wrapper" v-show="open">
+    <div class="popup-back" @click="closePopup"></div>
     <div class="popup">
       <!--THERE YOU CAN PASTE ANY HTML YOU WANT. START-->
       <h1>Popup</h1>
@@ -11,6 +11,14 @@
 </template>
 
 <script setup>
+import {defineProps, defineEmits} from 'vue'
+
+const props = defineProps(['open']);
+const emit = defineEmits(['close']);
+
+function closePopup() {
+  emit('close');
+}
 </script>
 
 <style scoped>
@@ -21,6 +29,7 @@
   left: 0;
   top: 0;
 }
+
 .popup-back {
   position: absolute;
   left: 50%;
@@ -32,6 +41,7 @@
   background: rgba(24, 10, 31, 0.7);
   z-index: 1;
 }
+
 .popup {
   width: fit-content;
   background: white;
