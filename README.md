@@ -1,24 +1,11 @@
-# popup-plugin
+# Popup-plugin
 
-## Project setup
-```
-npm install
-```
+## Get Started
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### Copy Popup directory to your project. And use it like I used it in App.vue
 
-### Compiles and minifies for production
-```
-npm run build
-```
+````
+// Popup directory path:
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+@/components/Popup
+````
