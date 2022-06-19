@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import Popup from '@/components/Popup';
+import Popup from '@/components/Popup/Popup';
 import {ref} from 'vue';
 
 const popup = ref(false);
@@ -24,7 +24,6 @@ function openPopup() {
 }
 
 function closePopup() {
-  console.log('CLOSE');
   popup.value = false;
 }
 </script>
