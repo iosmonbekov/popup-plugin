@@ -3,7 +3,7 @@
     <div class="popup-back" @click="closePopup"></div>
     <div class="popup">
       <!--THERE YOU CAN PASTE ANY HTML YOU WANT. START-->
-      <h1>Popup</h1>
+      <h1>{{ title }}</h1>
       <p>Click on black area out of popup to exit.</p>
       <!--THERE YOU CAN PASTE ANY HTML YOU WANT. END-->
     </div>
@@ -13,7 +13,7 @@
 <script setup>
 import {defineProps, defineEmits} from 'vue'
 
-const props = defineProps(['open']);
+const props = defineProps(['open', 'title']);
 const emit = defineEmits(['close']);
 
 function closePopup() {
