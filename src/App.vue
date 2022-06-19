@@ -7,7 +7,7 @@
   </button>
 
   <button @click="openPopup2">
-    Show Fuck
+    Show Popup2
   </button>
 
   <Popup
