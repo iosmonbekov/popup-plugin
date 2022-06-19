@@ -2,31 +2,21 @@
 
   <h1>Popup Plugin</h1>
 
-  <button @click="openPopup">
+  <button @click="open">
     Show Popup
   </button>
 
-
   <Popup
-      :open="popup"
-      @close="closePopup"
+      :open="state"
+      @close="close"
   />
 </template>
 
 <script setup>
-import Popup from '@/components/Popup';
-import {ref} from 'vue';
+import Popup from '@/components/Popup/Popup';
+import {usePopup} from "@/components/Popup/usePopup";
 
-const popup = ref(false);
-
-function openPopup() {
-  popup.value = true;
-}
-
-function closePopup() {
-  console.log('CLOSE');
-  popup.value = false;
-}
+const {state, open, close} = usePopup();
 </script>
 
 <style>
